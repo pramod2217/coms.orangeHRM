@@ -19,6 +19,7 @@ Feature: Add new employe
       | FirstName | MiddleName | LastName | EmployeeID |
       | pramod    | chandra    | kakumani |       2217 |
       | shiva     | reddy      | pella    |       2218 |
+      
 
   @Scenario2
   Scenario: Verify the Created Employee
