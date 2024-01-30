@@ -130,22 +130,29 @@
                   </a> <!-- runScenario("adding the new employee", "Add new employe") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("adding the new employee","Add new employe")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[text()=&apos;Sussess&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;button class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot; type=&quot;submit&quot;&gt; is not clickable at point (1413,491) because another element &lt;div class=&quot;oxd-form-loader&quot;&gt; obscures it
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy24.isDisplayed(Unknown Source)
-	at pages.actions.AddEmployeeActions.readSuccessToastMsg(AddEmployeeActions.java:48)
-	at steps.AddEmployeeSteps.i_see_successfull_toast_message(AddEmployeeSteps.java:36)
-	at ✽.I see Successfull Toast Message(file:///D:/Coms.OrangeHRM.com/com.orangeHRM/src/test/resources/features/AddEmployee.feature:16)
-
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [ef6edc20-713f-47e4-84fd-a5e6224ca799, clickElement {id=98b9063e-42c9-436b-85e5-75c2a147bff5}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0, moz:accessibilityChecks: false, moz:buildID: 20240118164516, moz:debuggerAddress: 127.0.0.1:10337, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8584, moz:profile: C:\Users\Pramod\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:10337/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (ef6edc20-713f-47e4-84fd-a5e6224ca799)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: ef6edc20-713f-47e4-84fd-a5e6224ca799
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at pages.actions.AddEmployeeActions.clickOnAddEmpPageSaveBtn(AddEmployeeActions.java:46)
+	at steps.AddEmployeeSteps.i_clicked_save_button(AddEmployeeSteps.java:30)
+	at ✽.I clicked Save button(file:///D:/Coms.OrangeHRM.com/com.orangeHRM/src/test/resources/features/AddEmployee.feature:15)
+... Removed 5 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
@@ -217,12 +224,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.RunCuck')
-data.setCell(0, 3, 103658);
+data.setCell(0, 3, 20851);
 window.suiteTableData['CucumberTestSuite']= { tableData: data, tableDiv: 'times-div-CucumberTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-CucumberTestSuite">
               </div> <!-- times-div-CucumberTestSuite -->
             </div> <!-- times-div -->
@@ -250,18 +257,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.RunCuck</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@43a0a32d)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@6ff6efdc)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("adding the new employee", "Add new employe")</span>
-                <span class="method-start">324 ms</span>
+                <span class="method-start">322 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">103993 ms</span>
+                <span class="method-start">21189 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

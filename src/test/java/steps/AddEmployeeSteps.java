@@ -19,10 +19,9 @@ public class AddEmployeeSteps {
 		addEmployeeActions.clickOnAddEmployeeTab();
 	}
 
-	@When("^I enterd Employee \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", & \"([^\"]*)\".$")
-	public void i_enterd_employee_pramod_chandra_kakumani(String FirstName, String MiddleName, String LastName,
-			String EmployeeID) {
-		addEmployeeActions.enterNewEmpDetails(FirstName, MiddleName, LastName, EmployeeID);
+	@When("^I enterd Employee \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\".$")
+	public void i_enterd_employee_pramod_chandra_kakumani(String FirstName, String MiddleName, String LastName) {
+		addEmployeeActions.enterNewEmpDetails(FirstName, MiddleName, LastName);
 
 	}
 
