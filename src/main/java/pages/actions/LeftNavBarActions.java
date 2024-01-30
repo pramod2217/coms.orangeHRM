@@ -17,25 +17,30 @@ public class LeftNavBarActions {
 	Actions action = new Actions(SeleniumDriver.getDriver());
 
 	public void clickOnAdminTab() {
-		action.click(leftNavBarLocators.adminLink).perform();
+		leftNavBarLocators.adminLink.click();
+		// action.click(leftNavBarLocators.adminLink).perform();
 	}
 
 	public void clickOnPimTab() {
-		action.click(leftNavBarLocators.pimLink).perform();
+		leftNavBarLocators.pimLink.click();
+		// action.click(leftNavBarLocators.pimLink).perform();
 	}
 
 	public void clickOnLeaveTab() {
-		action.click(leftNavBarLocators.leaveLink).perform();
+		leftNavBarLocators.leaveLink.click();
+		// action.click(leftNavBarLocators.leaveLink).perform();
 
 	}
 
 	public void clickOnTimeTab() {
-		action.click(leftNavBarLocators.timeLink).perform();
+		leftNavBarLocators.timeLink.click();
+		//action.click(leftNavBarLocators.timeLink).perform();
 
 	}
 
 	public void clickOnRecruitmentTab() {
-		action.click(leftNavBarLocators.recruitmentLink).perform();
+		leftNavBarLocators.recruitmentLink.click();
+		//action.click(leftNavBarLocators.recruitmentLink).perform();
 
 	}
 

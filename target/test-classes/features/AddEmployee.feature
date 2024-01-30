@@ -17,12 +17,11 @@ Feature: Add new employe
 
     Examples: 
       | FirstName | MiddleName | LastName | EmployeeID |
-      | pramod    | chandra    | kakumani |       2217 |
-      | shiva     | reddy      | pella    |       2218 |
-      
+      | pramod    | chandra    | kakumani |       2218 |
 
+  # | shiva     | reddy      | pella    |       2218 |
   @Scenario2
-  Scenario: Verify the Created Employee
+  Scenario: Verify the Created Employeee
     Then I clicked on the EmployeeList
     And I enter the EmployeeName "pramod" & EmployeeID "2217"
     Then I clicked on the Search Button

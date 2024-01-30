@@ -23,19 +23,32 @@ public class AddEmployeeActions {
 	}
 
 	public void enterNewEmpDetails(String FirstName, String MiddleName, String LastName, String EmployeeID) {
-		//action.sendKeys(addEmployeeLocators.empFirstName, FirstName).perform();
+		// action.sendKeys(addEmployeeLocators.empFirstName, FirstName).perform();
 		addEmployeeLocators.empFirstName.sendKeys(FirstName);
 		addEmployeeLocators.empMiddleName.sendKeys(MiddleName);
 		addEmployeeLocators.empLastName.sendKeys(LastName);
 		addEmployeeLocators.empID.clear();
 		addEmployeeLocators.empID.sendKeys(EmployeeID);
+
 	}
 
 	public void clickOnAddEmpPageSaveBtn() {
-		if (addEmployeeLocators.addEmpPageSaveBtn != null) {
+	
 			addEmployeeLocators.addEmpPageSaveBtn.click();
-			System.out.println("user clicked on the save button n the add employee page");
+			System.out.println("user clicked on the save button the add employee page");
+
+		
+	}
+
+	public void readSuccessToastMsg() {
+		if (addEmployeeLocators.addEmpPageSuccessfullToastMsg.isEnabled() == true) {
+			System.out.println("User addedd sussessfully");
+			// System.out.println(addEmployeeLocators.addEmpPageSuccessfullToastMsg.getClass());
+		} else {
+			System.out.println("User not addedd sussessfully");
 		}
+		;
+
 	}
 
 }

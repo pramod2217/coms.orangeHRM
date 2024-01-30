@@ -55,7 +55,7 @@ public class SeleniumDriver {
 	public static void tearDown() {
 		if (driver != null) {
 			driver.close();
-			driver.quit();
+			//driver.quit();
 		}
 
 		seleniumDriver = null;

@@ -17,5 +17,7 @@ public class AddEmployeeLocators {
 	public WebElement empID;
 	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	public WebElement addEmpPageSaveBtn;
+	@FindBy(how = How.XPATH, using = "//*[text()='Sussess']")
+	public WebElement addEmpPageSuccessfullToastMsg;
 
 }

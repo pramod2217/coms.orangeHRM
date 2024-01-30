@@ -12,7 +12,7 @@ public class AfterActions {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//SeleniumDriver.tearDown();
+		SeleniumDriver.tearDown();
 
 	}
 }

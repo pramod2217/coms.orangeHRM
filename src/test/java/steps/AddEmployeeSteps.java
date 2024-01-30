@@ -31,8 +31,9 @@ public class AddEmployeeSteps {
 		addEmployeeActions.clickOnAddEmpPageSaveBtn();
 	}
 
-	@Then("I see Successfull Toast Message")
+	@And("I see Successfull Toast Message")
 	public void i_see_successfull_toast_message() {
+		addEmployeeActions.readSuccessToastMsg();
 	}
 
 	@Then("I clicked on the EmployeeList")
