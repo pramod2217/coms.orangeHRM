@@ -7,15 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pages.locators.AddEmployeeLocators;
+import pages.locators.PIMPageLocators;
 import utils.SeleniumDriver;
 
 public class AddEmployeeActions {
 
-	AddEmployeeLocators addEmployeeLocators = null;
+	PIMPageLocators addEmployeeLocators = null;
+	private String eMpId;
 
 	public AddEmployeeActions() {
-		this.addEmployeeLocators = new AddEmployeeLocators();
+		this.addEmployeeLocators = new PIMPageLocators();
 		PageFactory.initElements(SeleniumDriver.getDriver(), addEmployeeLocators);
 
 	}
@@ -43,9 +44,15 @@ public class AddEmployeeActions {
 		// Duration.ofSeconds(30));
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
 
-		// addEmployeeLocators.empID.clear();
+		eMpId = addEmployeeLocators.empID.getText();
+		System.out.println("the current employee id is :" + eMpId);
 		// addEmployeeLocators.empID.sendKeys(EmployeeID);
 
+	}
+
+	public String getString() {
+
+		return eMpId;
 	}
 
 	public void clickOnAddEmpPageSaveBtn() {

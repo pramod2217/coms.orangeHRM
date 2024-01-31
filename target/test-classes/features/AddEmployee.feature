@@ -22,6 +22,6 @@ Feature: Add new employe
   @Scenario2
   Scenario: Verify the Created Employeee
     Then I clicked on the EmployeeList
-    And I enter the EmployeeName "pramod" & EmployeeID "2217"
+    And I enter the EmployeeName "pramod" & EmployeeID
     Then I clicked on the Search Button
     Then I see the Employee details in the RecordTable

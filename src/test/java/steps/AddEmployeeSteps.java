@@ -2,12 +2,14 @@ package steps;
 
 import io.cucumber.java.en.*;
 import pages.actions.AddEmployeeActions;
+import pages.actions.EmployeeListActions;
 import pages.actions.LeftNavBarActions;
 
 public class AddEmployeeSteps {
 
 	LeftNavBarActions leftNavBarActions = new LeftNavBarActions();
 	AddEmployeeActions addEmployeeActions = new AddEmployeeActions();
+	EmployeeListActions employeeListActions = new EmployeeListActions();
 
 	@Then("I clicked on the PIM Tab.")
 	public void i_clicked_on_the_pim_tab() {
@@ -37,18 +39,23 @@ public class AddEmployeeSteps {
 
 	@Then("I clicked on the EmployeeList")
 	public void i_clicked_on_the_employee_list() {
+		employeeListActions.clickOnEmployeeListTab();
 	}
 
-	@Then("I enter the EmployeeName {string} & EmployeeID {string}")
-	public void i_enter_the_employee_name_employee_id(String string, String string2) {
+	@Then("I enter the EmployeeName {string} & EmployeeID")
+	public void i_enter_the_employee_name_employee_id(String string) {
+		employeeListActions.empListPageEnterEmployeeDDetails(string);
+
 	}
 
 	@Then("I clicked on the Search Button")
 	public void i_clicked_on_the_search_button() {
+		employeeListActions.clickOnEmpListPageSearchBtn();
 	}
 
 	@Then("I see the Employee details in the RecordTable")
 	public void i_see_the_employee_details_in_the_record_table() {
+		
 	}
 
 }
